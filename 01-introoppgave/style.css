@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 1rem;
+    background-color:darkslategrey;
+    min-height: 100vh;
+}
+
+a:hover {
+    color: rgb(74, 48, 242);
+}
+
+a:visited{
+    color:cadetblue;
+}
+
+
+img {
+    width: 30%;
+    height: auto;
+    display: block;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid black;
+}
+
+.flexbox{
+display: flex;
+justify-content:space-around;
+align-items: flex-start;
+flex-direction: column;
+
+}
