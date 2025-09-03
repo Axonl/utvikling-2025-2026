@@ -2,21 +2,21 @@ let alder = prompt("Hvor gammel er du");
 
 
 if (alder <16) {
-    document.getElementById("forUng").innerText = "Ha deg vekk"
+    document.getElementById("tekst").innerText = "Ha deg vekk"
 }
 
 else if (alder <18){
-    document.getElementById("forUng").innerText = "Moped"
+    document.getElementById("tekst").innerText = "Moped"
 }
 
 else if (alder <21){
-    document.getElementById("forUng").innerText = "Bil, moped"
+    document.getElementById("tekst").innerText = "Bil, moped"
 }
 
 else if (alder >=21){
-    document.getElementById("forUng").innerText = "Bil, Moped, Buss"
+    document.getElementById("tekst").innerText = "Bil, Moped, Buss"
 }
 
 else{
-        document.getElementById("forUng").innerText = "Skriv gyldig tall"
+        document.getElementById("tekst").innerText = "Skriv gyldig tall"
 }
