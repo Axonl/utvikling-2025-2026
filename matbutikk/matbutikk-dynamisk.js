@@ -40,12 +40,17 @@ for (var i = 0; i < varer.length; i++) {
     vareknapp.id = i;
     vareknapp.addEventListener("click", kjopVare);
 
+    vareSlettknapp = document.createElement("button");
+    vareSlettknapp.innerHTML = "x";
+    vareSlettknapp.id = i;
+    vareSlettknapp.addEventListener("click", slettVare);
+
     // Legger til alle elementene i div-elementet til varen
     varediv.appendChild(vareoverskrift);
     varediv.appendChild(varebilde);
     varediv.appendChild(varepris);
     varediv.appendChild(vareknapp);
-
+    varediv.appendChild(vareSlettknapp);
     // Legger til div-elementet i elementet med alle varene
     varerEl.appendChild(varediv);
 }
@@ -57,6 +62,19 @@ function kjopVare(e) {
 
     // Øker antall i handlekurven med én
     varer[varenummer].handlekurv++;
+
+    // Kaller funksjonen oppdaterHandlekurv som oppdaterer handlekurven
+    oppdaterHandlekurv();
+}
+
+function slettVare(e) {
+    // Henter varenummeret
+    var varenummer = e.target.id;
+
+    // Sjekker at verdien ikke går under 0
+    if (varer[varenummer].handlekurv > 0) {
+        varer[varenummer].handlekurv--;
+    }
 
     // Kaller funksjonen oppdaterHandlekurv som oppdaterer handlekurven
     oppdaterHandlekurv();
